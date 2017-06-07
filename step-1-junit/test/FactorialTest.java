@@ -1,3 +1,5 @@
+//Hello world
+
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
@@ -32,4 +34,10 @@ public class FactorialTest {
 
         assertEquals(expectedResult, factorial.calculate(testStartValue));
     }
+    @Test(expected=IllegalArgumentException.class)
+    public void calculate_negative() {
+        factorial.calculate(-5);
+    }
+
+
 }
