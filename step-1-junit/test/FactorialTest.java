@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class FactorialTest {
     private Factorial factorial;
-    
+
     @Before
     public void setup(){
         factorial = new Factorial();
@@ -21,6 +21,14 @@ public class FactorialTest {
     public void calculate_1() {
         int testStartValue = 1;
         int expectedResult = 1;
+
+        assertEquals(expectedResult, factorial.calculate(testStartValue));
+    }
+
+    @Test
+    public void calculate_5() {
+        int testStartValue = 5;
+        int expectedResult = 120;
 
         assertEquals(expectedResult, factorial.calculate(testStartValue));
     }
